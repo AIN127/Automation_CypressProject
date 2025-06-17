@@ -27,3 +27,12 @@
 /// <reference types="cypress" />
 /// <reference types="cypress-iframe" />
 import 'cypress-iframe'
+
+Cypress.Commands.add('selectProduct',(productName1,productName2) =>{
+    cy.get("h4.card-title").each(($item,index,$list)=>{
+                if($item.text().includes(productName1) ||
+                    $item.text().includes(productName2)){
+                    cy.get("button[class='btn btn-info']").eq(index).click()
+                }
+            })
+})

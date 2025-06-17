@@ -27,11 +27,8 @@ describe('Framework',()=>{
             expect(attributeValue).to.equal('2')
 
             cy.get("a[class='nav-link']").contains('Shop').click()
-            cy.get("h4.card-title").each(($item,index,$list)=>{
-                if($item.text().includes('Samsung Note 8')){
-                    cy.get("button[class='btn btn-info']").eq(index).click()
-                }
-            })
+            cy.selectProduct('Nokia Edge','Blackberry')
+            //cy.selectProduct('Nokia Edge')
         })
 
 
