@@ -1,7 +1,7 @@
 describe('Framework',()=>{
 
     before('execute test data before it block',function(){
-        cy.fixture('testdata','profile').then((data)=>{
+        cy.fixture('profile','name').then((data)=>{
             this.data = data
 
         })
@@ -27,7 +27,7 @@ describe('Framework',()=>{
             expect(attributeValue).to.equal('2')
 
             cy.get("a[class='nav-link']").contains('Shop').click()
-            cy.selectProduct('Nokia Edge','Blackberry')
+            cy.selectProduct('Samsung Note 8','Nokia Edge')
             //cy.selectProduct('Nokia Edge')
         })
 
