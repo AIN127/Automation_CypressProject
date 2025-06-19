@@ -12,7 +12,7 @@ class HomePage
 
     getTwoWayDataBinding()
     {
-        return cy.get("h4 input[name='name'")
+        return cy.get("h4 input[name='name']")
     }
 
     getEntrepreneurRadioButton()
@@ -22,7 +22,7 @@ class HomePage
 
     getShop()
     {
-        return cy.get("a[class='nav-link")
+        return cy.get("a[class='nav-link']")
     }
 
 }
